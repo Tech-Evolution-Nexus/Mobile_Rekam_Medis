@@ -1,0 +1,8 @@
+<!-- res/drawable/blue_box.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna solid biru -->
+    <solid android:color="#2196F3"/> <!-- Gunakan kode warna biru sesuai keinginan -->
+
+    <!-- Sudut tanpa radius (default adalah 0dp, jadi bentuknya kotak) -->
+    <corners android:radius="0dp"/>
+</shape>
