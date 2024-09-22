@@ -8,7 +8,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/blueboxbtom"
     tools:context=".LoginActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,16 +16,14 @@
         <!-- Bagian atas dengan gambar -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="320dp"
             android:background="@drawable/bg_color_content">
-
             <ImageView
                 android:id="@+id/img_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/al"
-                android:layout_gravity="center"
-                android:layout_marginTop="1dp" />
+                android:layout_gravity="center"/>
         </LinearLayout>
 
         <!-- Bagian bawah dengan teks "Login" -->
@@ -35,7 +32,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/whitebox"
             android:orientation="vertical"
-            android:padding="50dp">
+            android:padding="60dp">
 
             <TextView
                 android:id="@+id/txvlogin"
@@ -44,61 +41,61 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="60dp"
                 android:fontFamily="monospace"
-                android:gravity="center"
                 android:text="Login"
-                android:textColor="@android:color/black"
+                android:textColor="@color/secondary_color"
                 android:textSize="40sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txplease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:contentDescription="Text displaying the name Nautilus"
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:text="Please login your account!"
-                android:textColor="@color/btn_color"
+                android:textColor="@color/black"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:contentDescription="Text displaying the name Nautilus" />
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="60dp"
                 android:background="@drawable/rounded_edt"
                 android:drawableStart="@drawable/ic_email"
-                android:hint=" Email"
                 android:drawablePadding="8dp"
+                android:elevation="3dp"
+                android:hint=" Email"
                 android:inputType="textEmailAddress"
-                android:padding="16dp"
+                android:padding="15dp"
                 android:textColor="@color/textColor"
-                android:elevation="6dp"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/rounded_edt"
                 android:drawableStart="@drawable/ic_password"
-                android:elevation="6dp"
+                android:drawableEnd="@drawable/ic_visibility_off"
                 android:drawablePadding="8dp"
                 android:hint=" Password"
                 android:inputType="textPassword"
-                android:padding="16dp"
+                android:padding="15dp"
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/hintColor"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/btn_color"
                 android:elevation="6dp"
                 android:padding="16dp"
@@ -111,26 +108,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="150dp"
+                android:contentDescription="Copyright text for the year 2024"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="Copyright @2024"
                 android:textColor="@color/hintColor"
-                android:textSize="18sp"
-                android:contentDescription="Copyright text for the year 2024" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txvCOPYy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="Text displaying the name Nautilus"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="Nautilus"
                 android:textColor="@color/hintColor"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:contentDescription="Text displaying the name Nautilus" />
+                android:textStyle="bold" />
         </LinearLayout>
+
     </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

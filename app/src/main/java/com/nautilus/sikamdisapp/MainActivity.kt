@@ -1,6 +1,7 @@
 package com.nautilus.sikamdisapp
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -11,6 +12,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import me.ibrahimsn.lib.SmoothBottomBar
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +25,19 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        val dashboardFragment = supportFragmentManager.findFragmentById(R.id.profile_fragment) as? DashboardFragment
+        // Mengakses view1 dari DashboardFragment
+        dashboardFragment?.view?.setOnClickListener {
+            // Tindakan saat view1 diklik
+        }
+
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         val smoothBottomBar = findViewById<SmoothBottomBar>(R.id.bottomNav)
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
+
 
         // Hubungkan ViewPager dengan SmoothBottomBar
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
