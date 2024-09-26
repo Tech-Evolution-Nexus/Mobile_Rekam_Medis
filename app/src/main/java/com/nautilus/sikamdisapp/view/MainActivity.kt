@@ -53,8 +53,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    class DasboardFragment : Fragment(R.layout.fragment_dashboard)
-    class ProfilFragment : Fragment(R.layout.fragment_profil)
 
     class ViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
         override fun getItemCount(): Int {
@@ -63,9 +61,9 @@ class MainActivity : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> DasboardFragment()
+                0 -> DashboardFragment()
                 1 -> ProfilFragment()
-                else -> DasboardFragment()
+                else -> DashboardFragment()
             }
         }
     }
