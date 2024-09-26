@@ -1,10 +1,11 @@
-package com.nautilus.sikamdisapp
+package com.nautilus.sikamdisapp.view
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.nautilus.sikamdisapp.R
 
 class RekmedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

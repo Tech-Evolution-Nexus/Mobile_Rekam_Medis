@@ -6,7 +6,7 @@
     app:startDestination="@id/home_fragment">
     <fragment
         android:id="@+id/home_fragment"
-        android:name="com.nautilus.sikamdisapp.DashboardFragment"
+        android:name="com.nautilus.sikamdisapp.view.fragment.DashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/profile_fragment"
-        android:name="com.nautilus.sikamdisapp.DashboardFragment"
+        android:name="com.nautilus.sikamdisapp.view.fragment.DashboardFragment"
         android:label="Dashboard"
         tools:layout="@layout/fragment_profil" >
 

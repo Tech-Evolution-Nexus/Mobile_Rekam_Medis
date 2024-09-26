@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardFragment">
+    tools:context=".view.fragment.DashboardFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -22,28 +22,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22708619" />
+        app:layout_constraintGuide_percent="0.3" />
 
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="12dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_color_card"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView01"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/doctor"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -76,11 +81,11 @@
 
 
     <View
-        android:id="@+id/view1"
+        android:id="@+id/btn_rekammed"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/bg_color_content"
@@ -96,21 +101,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="334dp" />
+        app:layout_constraintGuide_end="280dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="252dp" />
+        app:layout_constraintGuide_end="251dp" />
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/btn_obat"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/bg_color_content"
@@ -122,13 +127,13 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/btn_laporan"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/bg_color_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -136,13 +141,13 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <View
-        android:id="@+id/view4"
+        android:id="@+id/btn_riwayat"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/bg_color_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,122 +173,128 @@
         app:layout_constraintTop_toTopOf="@+id/view" />
 
 
-    <ImageView
-        android:id="@+id/image001"
-        android:layout_width="150dp"
-        android:layout_height="120dp"
-        android:src="@drawable/rk1"
-        android:foregroundGravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/view1"
-        app:layout_constraintEnd_toEndOf="@+id/view1"
-        app:layout_constraintStart_toStartOf="@+id/view1"
-        app:layout_constraintTop_toTopOf="@+id/view1"
-      />
-
     <TextView
         android:id="@+id/text1"
-        android:layout_width="232dp"
-        android:layout_height="79dp"
-        android:layout_margin="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
         android:gravity="center"
-        android:padding="20dp"
+        android:padding="14dp"
         android:text="Rekam Medis"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view1"
-        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_rekammed"
+        app:layout_constraintEnd_toEndOf="@+id/btn_rekammed"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/view1"
-        app:layout_constraintTop_toTopOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/btn_rekammed"
+        app:layout_constraintTop_toTopOf="@+id/btn_rekammed"
         app:layout_constraintVertical_bias="0.952" />
-    <ImageView
-        android:id="@+id/image002"
-        android:layout_width="160dp"
-        android:layout_height="140dp"
-        android:src="@drawable/rk2"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintHorizontal_bias="0.441"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
-        app:layout_constraintVertical_bias="0.283" />
 
     <TextView
         android:id="@+id/text2"
-        android:layout_width="232dp"
-        android:layout_height="79dp"
-        android:layout_margin="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="20dp"
+        android:padding="18dp"
         android:text="Obat"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_obat"
+        app:layout_constraintEnd_toEndOf="@+id/btn_obat"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/btn_obat"
+        app:layout_constraintTop_toTopOf="@+id/btn_obat"
         app:layout_constraintVertical_bias="0.952" />
-
-    <ImageView
-        android:id="@+id/image003"
-        android:layout_width="150dp"
-        android:layout_height="120dp"
-        android:src="@drawable/rk3"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:layout_constraintVertical_bias="0.346" />
 
     <TextView
         android:id="@+id/text3"
-        android:layout_width="232dp"
-        android:layout_height="79dp"
-        android:layout_margin="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="20dp"
+        android:padding="18dp"
         android:text="Laporan"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_laporan"
+        app:layout_constraintEnd_toEndOf="@+id/btn_laporan"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/btn_laporan"
+        app:layout_constraintTop_toTopOf="@+id/btn_laporan"
         app:layout_constraintVertical_bias="0.952" />
-    <ImageView
-        android:id="@+id/image004"
-        android:layout_width="150dp"
-        android:layout_height="120dp"
-        android:src="@drawable/rk4"
-        app:layout_constraintBottom_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.255" />
 
     <TextView
         android:id="@+id/text4"
-        android:layout_width="232dp"
-        android:layout_height="79dp"
-        android:layout_margin="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="20dp"
-        android:text="Riwayat pasien"
+        android:padding="18dp"
+        android:text="Riwayat Pasien"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_riwayat"
+        app:layout_constraintEnd_toEndOf="@+id/btn_riwayat"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/btn_riwayat"
+        app:layout_constraintTop_toTopOf="@+id/btn_riwayat"
         app:layout_constraintVertical_bias="0.952" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_obat"
+        app:layout_constraintBottom_toTopOf="@+id/text2"
+        app:layout_constraintEnd_toEndOf="@+id/btn_obat"
+        app:layout_constraintStart_toStartOf="@+id/btn_obat"
+        app:layout_constraintTop_toTopOf="@+id/btn_obat" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_rekmed"
+        app:layout_constraintBottom_toTopOf="@+id/text1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_rekammed"
+        app:layout_constraintStart_toStartOf="@+id/btn_rekammed"
+        app:layout_constraintTop_toTopOf="@+id/btn_rekammed" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_laporan"
+        app:layout_constraintBottom_toTopOf="@+id/text3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_laporan"
+        app:layout_constraintStart_toStartOf="@+id/btn_laporan"
+        app:layout_constraintTop_toTopOf="@+id/btn_laporan" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_riwayat"
+        app:layout_constraintBottom_toTopOf="@+id/text4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_riwayat"
+        app:layout_constraintStart_toStartOf="@+id/btn_riwayat"
+        app:layout_constraintTop_toTopOf="@+id/btn_riwayat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

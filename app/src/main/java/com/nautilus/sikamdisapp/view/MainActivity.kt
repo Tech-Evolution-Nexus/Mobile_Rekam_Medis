@@ -1,7 +1,7 @@
-package com.nautilus.sikamdisapp
+package com.nautilus.sikamdisapp.view
 
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -10,7 +10,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.nautilus.sikamdisapp.R
+import com.nautilus.sikamdisapp.view.fragment.DashboardFragment
+import com.nautilus.sikamdisapp.view.fragment.ProfilFragment
 import me.ibrahimsn.lib.SmoothBottomBar
 
 
@@ -18,35 +20,25 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-
-        val dashboardFragment = supportFragmentManager.findFragmentById(R.id.profile_fragment) as? DashboardFragment
-        // Mengakses view1 dari DashboardFragment
-        dashboardFragment?.view?.setOnClickListener {
-            // Tindakan saat view1 diklik
-        }
-
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         val smoothBottomBar = findViewById<SmoothBottomBar>(R.id.bottomNav)
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
 
 
-        // Hubungkan ViewPager dengan SmoothBottomBar
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 smoothBottomBar.itemActiveIndex = position
             }
         })
 
-        // Menghubungkan SmoothBottomBar dengan ViewPager
         smoothBottomBar.onItemSelected = { position ->
             viewPager.currentItem = position
         }
@@ -56,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     class ViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
         override fun getItemCount(): Int {
-            return 2 // Jumlah halaman
+            return 2
         }
 
         override fun createFragment(position: Int): Fragment {

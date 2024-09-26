@@ -7,128 +7,155 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blueboxbtom"
-    tools:context=".LoginActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    tools:context=".view.LoginActivity">
 
-        <!-- Bagian atas dengan gambar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="320dp"
-            android:background="@drawable/bg_color_content">
-            <ImageView
-                android:id="@+id/img_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/al"
-                android:layout_gravity="center"/>
-        </LinearLayout>
+    <ImageView
+        android:id="@+id/img_login"
+        android:layout_width="410dp"
+        android:layout_height="212dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/al"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Bagian bawah dengan teks "Login" -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/whitebox"
-            android:orientation="vertical"
-            android:padding="60dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/whitebox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_login">
 
-            <TextView
-                android:id="@+id/txvlogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:fontFamily="monospace"
-                android:text="Login"
-                android:textColor="@color/secondary_color"
-                android:textSize="40sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txvCOPY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Copyright text for the year 2024"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Copyright @2024"
+            android:textColor="@color/hintColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/txplease"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:contentDescription="Text displaying the name Nautilus"
-                android:fontFamily="monospace"
-                android:gravity="center"
-                android:text="Please login your account!"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txvlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="54dp"
+            android:fontFamily="monospace"
+            android:text="Login"
+            android:textColor="@color/secondary_color"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txplease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Text displaying the name Nautilus"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Please login your account!"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txvlogin" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_login"
+            android:layout_width="363dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="24dp"
+            app:startIconDrawable="@drawable/ic_email"
+            android:hint="Email"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txplease"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email_login"
+                android:id="@+id/txt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/rounded_edt"
-                android:drawableStart="@drawable/ic_email"
-                android:drawablePadding="8dp"
-                android:elevation="3dp"
-                android:hint=" Email"
-                android:inputType="textEmailAddress"
-                android:padding="15dp"
-                android:textColor="@color/textColor"
-                android:textSize="16sp" />
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_login"
+            android:layout_width="363dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="16dp"
+            app:startIconDrawable="@drawable/ic_password"
+            android:hint="Password"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email_login"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_login"
+                android:id="@+id/txt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/rounded_edt"
-                android:drawableStart="@drawable/ic_password"
-                android:drawableEnd="@drawable/ic_visibility_off"
-                android:drawablePadding="8dp"
-                android:hint=" Password"
-                android:inputType="textPassword"
-                android:padding="15dp"
-                android:textColor="@color/textColor"
-                android:textColorHint="@color/hintColor"
-                android:textSize="16sp" />
+                android:inputType="textPassword"/>
 
-            <Button
-                android:id="@+id/btn_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/btn_color"
-                android:elevation="6dp"
-                android:padding="16dp"
-                android:text="Login"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/txvCOPY"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="150dp"
-                android:contentDescription="Copyright text for the year 2024"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:text="Copyright @2024"
-                android:textColor="@color/hintColor"
-                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/txvCOPYy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:contentDescription="Text displaying the name Nautilus"
-                android:fontFamily="sans-serif-black"
-                android:gravity="center"
-                android:text="Nautilus"
-                android:textColor="@color/hintColor"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </LinearLayout>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="@color/btn_color"
+            android:elevation="6dp"
+            android:padding="16dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_login" />
+
+        <TextView
+            android:id="@+id/txvCOPYy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="Text displaying the name Nautilus"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Nautilus"
+            android:textColor="@color/hintColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txvCOPY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
